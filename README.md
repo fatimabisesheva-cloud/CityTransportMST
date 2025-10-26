@@ -37,3 +37,30 @@ MST total cost is identical for both algorithms.
 Execution time depends on graph size: small, medium, and large graphs tested.
 
 Output can be used for analytical report.
+| File        | Vertices | Edges | Kruskal MST | Prim MST | Kruskal Time (ms) | Prim Time (ms) |
+| ----------- | -------- | ----- | ----------- | -------- | ----------------- | -------------- |
+| small.json  | 5        | 4     | 16          | 16       | 0.015             | 0.027          |
+| medium.json | 10       | 10    | 19          | 19       | 0.022             | 0.044          |
+| large.json  | 20       | 38    | 75          | 75       | 1.564             | 4.988          |
+Interpretation
+
+Both algorithms produce the same total MST cost.
+
+Execution time increases with graph size.
+
+Kruskal is faster on sparse graphs, while Prim is better suited for dense graphs with a priority queue.
+
+| Algorithm | Advantages                                                           | Disadvantages                                            |
+| --------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
+| Kruskal   | Efficient on sparse graphs; simple implementation using edge sorting | Less efficient on dense graphs                           |
+| Prim      | Works well on dense graphs; easy to implement with a priority queue  | Slower on large graphs without optimized data structures |
+
+Conclusions
+
+Both algorithms correctly compute the MST for graphs of any size.
+
+Kruskal is recommended for sparse graphs.
+
+Prim is recommended for dense graphs.
+
+The choice depends on graph density, size, and implementation convenience.
